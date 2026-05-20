@@ -76,7 +76,7 @@ export default function ProductPage() {
           <div className="mt-2 text-sm text-zinc-300">{status.error}</div>
           <button
             onClick={() => nav("/")}
-            className="mt-4 rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-500"
+            className="mt-4 rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-emerald-400"
           >
             Volver
           </button>
@@ -93,7 +93,7 @@ export default function ProductPage() {
           <div className="mt-4">
             <Link
               to="/"
-              className="rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-500"
+              className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-emerald-400"
             >
               Volver al catálogo
             </Link>
@@ -107,18 +107,18 @@ export default function ProductPage() {
 
   return (
     <div>
-      <header className="sticky top-0 z-50 border-b border-red-300/20 bg-gradient-to-r from-red-950 via-red-900 to-red-950 backdrop-blur">
-        <div className="mx-auto max-w-5xl px-4 py-2 flex items-center justify-between">
-          <Link to="/" className="text-sm text-red-50 hover:text-white">
+      <header className="sticky top-0 z-50 border-b border-emerald-500/20 bg-zinc-950/80 backdrop-blur">
+        <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
+          <Link to="/" className="text-sm text-emerald-200 hover:text-emerald-100">
             ← Volver
           </Link>
-          <div className="text-xs text-red-100/80">Producto</div>
+          <div className="text-xs text-zinc-500">Producto</div>
         </div>
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-8">
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-3xl border border-red-500/20 bg-zinc-900/30">
+          <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/30">
             <div className="aspect-[4/3] bg-zinc-950/40">
               {product.imagen ? (
                 <img
@@ -134,8 +134,8 @@ export default function ProductPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-red-500/20 bg-zinc-900/30 p-6">
-            <div className="text-sm text-red-200/80">{product.categoria}</div>
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6">
+            <div className="text-sm text-emerald-200/80">{product.categoria}</div>
             <h1 className="mt-2 text-3xl font-semibold">{product.nombre}</h1>
 
             <div className="mt-4 flex items-center justify-between">
@@ -172,7 +172,7 @@ export default function ProductPage() {
                 className={[
                   "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold",
                   inStock
-                    ? "bg-red-600 text-white hover:bg-red-500"
+                    ? "bg-emerald-500 text-zinc-950 hover:bg-emerald-400"
                     : "bg-zinc-800 text-zinc-300 cursor-not-allowed pointer-events-none",
                 ].join(" ")}
               >
